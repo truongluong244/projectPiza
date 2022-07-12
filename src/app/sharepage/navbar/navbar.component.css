@@ -1,0 +1,10 @@
+.navbar-light .navbar-nav .nav-link
+{
+    color: chocolate;
+    opacity: 80%;
+}
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    color: var(--primary-color);
+    text-decoration: underline;
+}

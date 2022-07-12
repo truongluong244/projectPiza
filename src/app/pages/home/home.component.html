@@ -1,0 +1,34 @@
+<div class="banner" style="padding-top:1rem">
+    <div class="content">
+        <a routerLink="menu">Xem Menu Hôm Nay  <i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>
+<!-- step  -->
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">Tại sao lựa chọn <span class="highlight">PizzaHut</span></h1>
+    <div class="row mt-5" >
+        <!-- one  -->
+        <div class="col-lg-4 mt-2" *ngFor="let food of foodSelect">
+            <div class="stepBox">
+                <h1>{{food.id}}</h1>
+                <p>{{food.title}}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- foodbox  -->
+<div class="container mt-4 mb-4">
+    <h1 class="text-center">Món ăn được đặt nhiều nhất tại <span class="highlight">PizzaHut</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let fd of foodData;index as i">
+            <div class="foodbox" *ngIf="i<=3">
+                <img src="{{fd.foodImg}}" />
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodPrice | currency:'VND'}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="viewmorebtn">Xem tất cả <i class="bi bi-arrow-right"></i></a>
+</div>
